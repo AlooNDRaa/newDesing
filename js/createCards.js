@@ -7,7 +7,7 @@ export const Cards = {
          },
         { 
             id: 2,
-            name: "Accesorios y bolsos",
+            name: "Accesorios",
             link: "./html/accesorios.html" 
         },
         { 
@@ -22,6 +22,11 @@ export const Cards = {
         },
         {
             id:5,
+            name:"Hogar",
+            link: "./html/hogar.html"  
+        },
+        {
+            id: 6,
             name:"Ofertas",
             link:"./html/ofertas.html"
         }

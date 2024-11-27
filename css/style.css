@@ -7,9 +7,20 @@
     --texts: #372a28;
     --gray: #847F90;
     --white: #FCFCFC;
+    
+    /* sizes */
+    
+    --font-size-h1: 3.5rem;
+    --font-size-h2: 3rem;
+    --font-size-h3: 2rem;
+    --font-size-h4: 1.8rem;
+    --font-size-h5: 1.3rem;
+    --font-size-h6: 0.87rem ;
+    --font-size-P: 0.75rem;
     --border-radius: 0.5rem;
-    --navbar-height: 5rem;
+    --navbar-height: 4rem;
     --gap: 1.5rem;
+    
 }
 
 
@@ -24,6 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    width: 100%;
 }
 
 
@@ -36,7 +48,7 @@ body {
     font-family: "Montserrat", serif;
     width: 100%;
     z-index: 2;
-    gap: 1.5rem;
+    gap: var(--gap);
     background: var(--background);
     height: var(--navbar-height);
     padding: 0 1rem;
@@ -45,7 +57,7 @@ body {
 
 .menu__bar {
     display: flex;
-    gap: 1.5rem;
+    gap: var(--gap);
     align-items: center;
     width: 100%;
 }
@@ -55,11 +67,12 @@ h1 {
     font-weight: 500;
     font-family: "Bebas Neue", serif;
     letter-spacing: 3px;
-    font-size: 2rem;
+    font-size: var(--font-size-h3);
 }
 
 a {
     text-decoration: none;
+    color: var(--texts);
 }
 
 .navigation {
@@ -67,6 +80,7 @@ a {
     flex-direction: row;
     list-style-type: none;
     align-items: center;
+    font-family: "Montserrat", serif;
     gap: 0.5rem;
     background: var(--background);
 }
@@ -76,7 +90,7 @@ a {
     position: relative;
     cursor: pointer;
     align-items: center;
-    height: 2.625rem;
+    height: var(--navbar-height);
 }
 
 .navigation>li>button>svg {
@@ -99,11 +113,11 @@ a {
     text-decoration: none;
     border: none;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 300;
     gap: 0.25rem;
     opacity: 1;
     align-items: center;
-    font-size: 0.875rem;
+    font-size: var(--font-size-h6);
     flex-wrap: nowrap;
     white-space: nowrap;
     background: none;
@@ -115,7 +129,7 @@ a {
 
 .dropdown {
     position: absolute;
-    top: 2.625rem;
+    top: 3.5rem;
     min-width: 15rem;
     border-radius: 0.5rem;
     background: var(--white);
@@ -153,6 +167,7 @@ a {
     list-style-type: none;
     flex-direction: column;
     gap: 0.25rem;
+    font-family: "Montserrat", serif;
 }
 
 .list-menu-items>li>a {
@@ -162,6 +177,7 @@ a {
     width: 100%;
     color: var(--gray);
     text-decoration: none;
+    font-family: "Montserrat", serif;
 }
 
 .list-menu-items>li>a:hover {
@@ -190,12 +206,12 @@ a {
 }
 
 .item-title h3 {
-    font-size: 0.875rem;
-    font-weight: 600;
+    font-size: var(--font-size-h6);
+    font-weight: 900;
 }
 
 .item-title p {
-    font-size: 0.75rem;
+    font-size: var(--font-size-P);
 }
 
 .navigation>li:hover .dropdown {
@@ -323,7 +339,6 @@ a {
     position: relative;
     max-width: 100%;
     overflow: hidden;
-    border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -342,7 +357,6 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
 }
 
 .prev,
@@ -379,21 +393,24 @@ a {
 }
 
 .dots-container {
-    margin-top: 20px;
+    margin-top: -20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 9;
 }
 
 .dot {
     height: 15px;
     width: 15px;
     margin: 0 5px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(29, 27, 27, 0.5);
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border: solid 1.4px rgb(87, 59, 59);
+    padding: 0.3rem;
 }
 
 .dot.active {
@@ -402,12 +419,24 @@ a {
 
 /* CardsHome */
 
+/* Tesxt home */
+
+div h2 {
+    font-family: "Bebas Neue", serif;
+    color: var(--texts);
+    text-shadow: 2px 2px 8px rgb(138, 138, 137);
+    letter-spacing: 0.4rem;
+    text-align: center;
+    margin:8rem 0 4rem 0;
+    font-size: var(--font-size-h2);
+}
+
 #cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    margin-block: 4rem;
+    margin-block: 6rem;
 
 }
 
@@ -434,12 +463,9 @@ a {
 .sect-cards {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-
     flex-wrap: wrap;
     gap: 2rem;
-    color: var(--primary);
     margin-bottom: 4rem;
 }
 
@@ -450,21 +476,22 @@ a {
 }
 
 .card-title {
-    color: #1d1514;
-    font-size: 2.5rem;
+    color:var(--texts);
+    font-size: 2.4rem;
     font-family: "Montserrat", serif;
     text-align: center;
-    font-weight: 200;
+    font-weight: 300;
 }
 
  .shop {
-    background-color: rgba(243, 243, 243, 0.993);
+    background-color: rgba(255, 255, 255, 0.993);
     box-shadow: 6px 5px 1px 0px rgba(0, 0, 0, 0.25);
-    height: 3.5rem;
-    width: 6rem;
+    height: 3.7rem;
+    border: none;
+    width: 7rem;
     cursor: pointer;
     border-radius: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -478,13 +505,15 @@ a {
 
 @media (max-width:720px) {
     .footer {
-        text-align: left;
+        text-align: center;
         padding: 5%;
     }
 
     .footer .row ul li {
-        display: block;
-        margin: 10px 0px;
+        display: flex;
+        margin: 20px 0px;
+        justify-content: center;
+        text-align: left;
         text-align: left;
     }
 
@@ -519,7 +548,7 @@ a {
     }
 }
 
-@media (max-width: 1026px) {
+@media (max-width: 1250px) {
     a h1 {
         font-size: 1rem;
     }
@@ -553,5 +582,11 @@ a {
     .burger-menu {
         display: flex;
         align-items: center;
+    }
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 15%;
     }
 }
