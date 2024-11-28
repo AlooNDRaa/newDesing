@@ -15,37 +15,51 @@ document.getElementById("header").innerHTML = `
             </button>
             <div class="dropdown">
                 <ul class="list-items-with-description">
-                    <li>                 
-                     <div class="item-title">
-                         <h3>Moda</h3>
-                    </div>
+                  <ul>
+                    <li>
+                        <div class="item-title">
+                            <a href="../html/cards.html?categoryId=1">
+                                <h3>Moda</h3>
+                            </a>
+                        </div>
                     </li>
+                    <li>
+                        <div class="item-title">
+                            <a href="../html/cards.html?categoryId=3">
+                                <h3>Joyería</h3>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-title">
+                            <a href="../html/cards.html?categoryId=2">
+                                <h3>Accesorios</h3>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-title">
+                            <a href="../html/cards.html?categoryId=4">
+                                <h3>Cuidado Facial</h3>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-title">
+                            <a href="../html/cards.html?categoryId=5">
+                                <h3>Hogar</h3>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-title">
+                            <a href="../html/cards.html?categoryId=6">
+                                <h3>Ofertas</h3>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
 
-                    <li>
-                        <div class="item-title">
-                            <h3>Joyeria</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-title">
-                            <h3>Accesorios</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-title">
-                            <h3>Cuidado Facial</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-title">
-                            <h3>Hogar</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-title">
-                            <h3>Ofertas</h3>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </li>
@@ -123,7 +137,7 @@ document.getElementById("header").innerHTML = `
     </ul>
 </div>
 <div class="action-buttons">
-    <a href="#sign-in" title="Sign in" class="secondary hide">
+    <a href="../html/registros.html" title="Sign in" class="secondary hide">
         Sign in
     </a>
      <a href="#sign-in" title="Sign in" class="secondary hide">

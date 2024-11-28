@@ -43,14 +43,13 @@ body {
 .menu__wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     font-family: "Montserrat", serif;
     width: 100%;
     z-index: 2;
     gap: var(--gap);
     background: var(--background);
     height: var(--navbar-height);
-    padding: 0 1rem;
+    padding: 0.7rem;
     align-items: center;
 }
 
@@ -74,9 +73,6 @@ a {
     color: var(--texts);
 }
 
-i{
-    color: var(--texts);
-}
 
 .navigation {
     display: flex;
@@ -179,7 +175,6 @@ i{
     padding: 0.30rem;
     font-weight: 600;
     font-size: 0.875rem;
-    width: 100%;
     color: var(--texts);
     text-decoration: none;
     font-family: "Montserrat", serif;
@@ -187,7 +182,7 @@ i{
 
 .material-symbols-outlined {
     font-size: var(--font-size-h5);
-    margin-left: 0.5rem;
+    margin-left: 0.7rem;
 }
 
 .list-menu-items>li>a:hover {
@@ -200,8 +195,7 @@ i{
 
 .list-items-with-description li {
     display: flex;
-    padding: 0.30rem;
-    gap: 1rem;
+    padding: 0.20rem;
     width: 100%;
 }
 
@@ -359,7 +353,7 @@ i{
 
 .slide {
     min-width: 100%;
-    height: 450px;
+    height: 90vh;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -514,16 +508,17 @@ div h2 {
 
 #category-title{
     text-align: center;
-    margin-top: 5rem;
     color: var(--background);
     font-size: var(--font-size-h1);
-    height: 10rem;
+    height: 25rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1.3rem;
 }
 
 .text-bacground{
-    background-color: var(--primary-dark)
-
-    ;
+    background-image:url("../imgs/banners/wallpapers.png");
 }
 
 
@@ -591,12 +586,13 @@ div h2 {
 .content-p-cards h3,
 .content-p-cards p {
     margin: 0;
+    padding: 0;
 }
 
 .content-p-cards h3 {
-    font-size: 1.4rem;
+    font-size: var(--font-size-h3);
     font-weight: bold;
-    color: #333;
+    color: var(--texts);
 }
 
 .content-p-cards p {
@@ -615,7 +611,7 @@ div h2 {
 }
 
 .comp-card{
-    background-color: #000000fd;
+    background-color: var(--primary-dark);
     font-size: var(--fontButtons);
     color: var(--background);
     border: none;
@@ -629,10 +625,11 @@ div h2 {
 .ver-mas-card {
     background-color: rgb(255, 255, 255);
     border: none;
-    font-weight: 500;
+    font-weight: 600;
     border-radius: var(--border-radius);
     padding: 0.8rem 1.5rem;
     font-size: var(--fontButtons);
+    color: var(--texts);
     box-shadow:inset 10px 8px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -641,6 +638,7 @@ div h2 {
 .comp-card:hover,
 .ver-mas-card:hover {
     background-color: var(--primary-light);
+    color: var(--background);
 }
 
 .comp-card:focus,
@@ -668,27 +666,9 @@ div h2 {
 
     .content-p-card {
         padding: 1rem;  
-}
 
-@media (max-width:720px) {
-    .footer {
-        text-align: center;
-        padding: 5%;
-    }
-
-    .footer .row ul li {
-        display: flex;
-        margin: 20px 0px;
-        justify-content: center;
-        text-align: left;
-        text-align: left;
-    }
-
-    .footer .row a i {
-        margin: 0% 3%;
     }
 }
-
 
 
 @media (max-width: 720px) {
@@ -712,6 +692,23 @@ div h2 {
 
     #Buscador {
         display: none;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 5%;
+    }
+
+    .footer .row ul li {
+        display: flex;
+        margin: 20px 0px;
+        justify-content: center;
+        text-align: left;
+        text-align: left;
+    }
+
+    .footer .row a i {
+        margin: 0% 3%;
     }
 }
 
@@ -745,7 +742,7 @@ div h2 {
 }
 
 
-@media (max-width: 780px) {
+@media (max-width: 760px) {
     .burger-menu {
         display: flex;
         align-items: center;
@@ -757,4 +754,9 @@ div h2 {
         object-position: 15%;
     }
 }
-}
+
+
+
+
+
+

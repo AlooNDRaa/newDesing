@@ -1,0 +1,249 @@
+
+/* LOGIN AND REGISTER */
+
+#app-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100%;
+}
+
+.div-hijo-form {
+    position: relative; 
+    width: 53rem;
+    height: max-content;
+    background-color: #ffffff; 
+    border-radius: 1.2rem;
+    box-shadow: 0px 4px 8px #c7d1da; 
+    backdrop-filter: blur(100px); 
+    -webkit-backdrop-filter: blur(10px);
+    border: 2.5px solid #161b1d0c; 
+    padding-block: 1.2rem;
+}
+
+
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 30rem;
+}
+
+
+.h3-form {
+    font-size: 2.3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #190019;
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+}
+
+input {
+    border: beige 1px solid;
+    box-shadow: inset 2px 3px 6px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 0.9rem;
+    color: #553862;
+    margin-bottom: 0.2rem;
+    background-color: white;
+}
+
+form input:focus {
+    outline: none;
+    border: 1px solid beige;
+    background-color: #efedf7;
+}
+
+.label-form-checkbox {
+    color: #000000;
+    font-weight: 300;
+}
+
+button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    font-optical-sizing:auto;
+    letter-spacing: 3px;
+    font-weight: 400;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow:  3px 8px 10px rgba(78, 78, 78, 0.151);
+    border-radius: 1rem;
+    margin-block: 0.4rem;
+    font-size: 1.3rem; 
+    color: #190019;
+    cursor: pointer;
+    height: 4rem;
+    text-align: center;
+}
+
+button:hover{
+  box-shadow:  3px 5px 8px #efedf7;
+}
+
+.custom-checkbox {
+    display: flex;
+    position: absolute;
+    padding-left: 1.9rem;
+    cursor: pointer;
+    font-size: 1rem;
+    user-select: none;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .custom-checkbox input {
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: inset 2px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0.2rem;
+  }
+  
+  .custom-checkbox input:checked ~ .checkmark {
+    background-color: #1d1514;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: relative;
+    display: flex;
+  }
+  
+  .custom-checkbox input:checked ~ .checkmark:after {
+    display: flex;
+  }
+  
+  .custom-checkbox .checkmark:after {
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid rgb(255, 255, 255);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  
+
+  div .form-loginforms{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  
+
+   a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+  
+  button .button-inset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9rem;
+    gap: 0.2rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: #1b0c22;
+  }
+
+  .register-button{
+    background-color: #ffffff;
+    box-shadow:2px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    height: 4rem;
+    width: 9rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .register-button:hover{
+    background-color: #efedf7;
+    color: #1b0c22;
+  }
+
+ p{
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    color: #190019;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  div .div-forms {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0.5rem;
+    align-items: center;
+  }
+
+  .login--s{
+    font-size: 1rem;
+    margin-top: 0.8rem;
+  }
+
+  .login--sS {
+    color:#190019;
+    font-weight: 600;
+    margin-left: 0.4rem;
+    cursor: pointer;
+  }
+
+  .p-passForgot {
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    margin-top: 1.2rem;
+  }
+
+  .s-classP{
+      color: #190019;
+      font-weight: 600;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
