@@ -1,6 +1,5 @@
 /* Generales */
 :root {
-    --primary: #372a28;
     --primary-light: #51403c;
     --primary-dark: #241916;
     --background: #f9fcf5;
@@ -10,7 +9,7 @@
     
     /* sizes */
     
-    --font-size-h1: 3.5rem;
+    --font-size-h1: 5rem;
     --font-size-h2: 3rem;
     --font-size-h3: 2rem;
     --font-size-h4: 1.8rem;
@@ -20,7 +19,7 @@
     --border-radius: 0.5rem;
     --navbar-height: 4rem;
     --gap: 1.5rem;
-    
+    --fontButtons: 0.99rem;
 }
 
 
@@ -72,6 +71,10 @@ h1 {
 
 a {
     text-decoration: none;
+    color: var(--texts);
+}
+
+i{
     color: var(--texts);
 }
 
@@ -173,15 +176,22 @@ a {
 .list-menu-items>li>a {
     display: flex;
     gap: 1rem;
+    padding: 0.30rem;
+    font-weight: 600;
     font-size: 0.875rem;
     width: 100%;
-    color: var(--gray);
+    color: var(--texts);
     text-decoration: none;
     font-family: "Montserrat", serif;
 }
 
+.material-symbols-outlined {
+    font-size: var(--font-size-h5);
+    margin-left: 0.5rem;
+}
+
 .list-menu-items>li>a:hover {
-    color: var(--primary);
+    color: var(--gray);
 }
 
 .list-items-with-description {
@@ -190,13 +200,13 @@ a {
 
 .list-items-with-description li {
     display: flex;
-    padding: 0.25rem;
+    padding: 0.30rem;
     gap: 1rem;
     width: 100%;
 }
 
 .list-items-with-description li:hover {
-    color: var(--primary);
+    color: var(--gray);
 }
 
 .list-items-with-description li svg {
@@ -207,7 +217,7 @@ a {
 
 .item-title h3 {
     font-size: var(--font-size-h6);
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .item-title p {
@@ -500,8 +510,165 @@ div h2 {
     cursor: pointer;
 }
 
+/* CARDS DINAMICAS DE COMPRAS */
+
+#category-title{
+    text-align: center;
+    margin-top: 5rem;
+    color: var(--background);
+    font-size: var(--font-size-h1);
+    height: 10rem;
+}
+
+.text-bacground{
+    background-color: var(--primary-dark)
+
+    ;
+}
 
 
+#products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fdf8f8;
+    font-family: "Montserrat", serif;
+    color: var(--texts);
+    border-radius: var(--border-radius);
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.3);
+    height: 25rem;
+    width: 36rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.img-sep {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img-sep img {
+    width: 100%;
+    height: 30rem;
+    max-width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.img-sep img:hover{
+    transform: scale(1.3);
+    transition: 2s ease-in-out;
+}
+
+.content-p-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    gap: 0.8rem;
+    flex-grow: 1;
+    width: 50%; 
+}
+
+.content-p-cards h3,
+.content-p-cards p {
+    margin: 0;
+}
+
+.content-p-cards h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.content-p-cards p {
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+    line-height: 1.5;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: max-content; 
+}
+
+.comp-card{
+    background-color: #000000fd;
+    font-size: var(--fontButtons);
+    color: var(--background);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.ver-mas-card {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    padding: 0.8rem 1.5rem;
+    font-size: var(--fontButtons);
+    box-shadow:inset 10px 8px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comp-card:hover,
+.ver-mas-card:hover {
+    background-color: var(--primary-light);
+}
+
+.comp-card:focus,
+.ver-mas-card:focus {
+    outline: none;
+}
+
+.comp-card:active,
+.ver-mas-card:active {
+    transform: scale(0.98);
+}
+
+
+@media (max-width: 768px) {
+    .product-card {
+        flex-direction: column;
+        height: auto; 
+        width: 100%;
+    }
+
+    .img-sep {
+        width: 100%; 
+        height: 50%; 
+    }
+
+    .content-p-card {
+        padding: 1rem;  
+}
 
 @media (max-width:720px) {
     .footer {
@@ -589,4 +756,5 @@ div h2 {
         object-fit: cover;
         object-position: 15%;
     }
+}
 }

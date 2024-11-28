@@ -16,11 +16,12 @@ function generateCards() {
                 </div>
                 <div class="card-footer">
                     <button class="shop">
-                        <a href="${card.link}" class="pb-2">Ver</a>
+                <a href="../html/cards.html?categoryId=${card.id}" class="pb-2">Ver</a>
                     </button>
                 </div>
             </section>
-            `;
+        `;
+        
 
             cardsContainer.appendChild(cardElement);
         });
@@ -29,4 +30,4 @@ function generateCards() {
 console.log(Cards);
 
 
-document.addEventListener("DOMContentLoaded", generateCards);
+document.addEventListener("DOMContentLoaded", generateCards());
