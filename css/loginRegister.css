@@ -29,7 +29,11 @@
     padding-block: 1.2rem;
 }
 
-
+.dark-mode .div-hijo-form {
+  background-color: #000000;
+  color: white;
+  box-shadow: 0px 4px 8px #1d1d1d; 
+}
 
 form {
     display: flex;
@@ -54,6 +58,10 @@ form {
     font-style: normal;
 }
 
+.dark-mode .h3-form {
+  color: white;
+}
+
 label {
     font-size: 1.2rem;
     margin-bottom: 0.2rem;
@@ -66,9 +74,19 @@ input {
     box-shadow: inset 2px 3px 6px rgba(0, 0, 0, 0.3);
     padding: 1rem;
     border-radius: 0.9rem;
-    color: #553862;
+    color: #000000;
     margin-bottom: 0.2rem;
     background-color: white;
+}
+
+.dark-mode input {
+  background-color: #000000;
+  color: wheat;
+}
+
+
+.dark-mode input:focus {
+  background-color: #1d1d1d;
 }
 
 form input:focus {
@@ -98,6 +116,16 @@ button {
     cursor: pointer;
     height: 4rem;
     text-align: center;
+}
+
+.dark-mode button {
+  background-color: #000000;
+  color: white;
+  box-shadow: 3px 8px 10px rgba(80, 80, 80, 0.26);
+}
+
+.dark-mode button:hover {
+  box-shadow: 3px 8px 10px rgba(56, 48, 48, 0.26);
 }
 
 button:hover{
@@ -165,14 +193,19 @@ button:hover{
     text-align: center;
   }
 
-  
-
    a {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.3rem;
+    color: #000000;
   }
+
+  .dark-mode a {
+    background-color: #0e0d0d;
+    color: white;
+  }
+
   
   button .button-inset{
     display: flex;
@@ -212,6 +245,10 @@ button:hover{
     text-align: center;
   }
 
+  .dark-mode p {
+    color: white;
+  }
+
   div .div-forms {
     display: flex;
     justify-content: space-between;
@@ -231,16 +268,29 @@ button:hover{
     cursor: pointer;
   }
 
+  .dark-mode .login--sS{
+    color: wheat;
+  }
+
   .p-passForgot {
     gap: 0.3rem;
     font-size: 0.9rem;
     margin-top: 1.2rem;
   }
 
+  .dark-mode .p-passForgot{
+    color: white;
+  }
+
   .s-classP{
       color: #190019;
       font-weight: 600;
   }
+
+  .dark-mode .s-classP{
+    color: white;
+  }
+  
 
   .error-message {
     color: red;
