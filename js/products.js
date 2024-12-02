@@ -62,3 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("No category ID found in URL");  
     }
 });
+
+
+// agregar manejo de productos donde maneje tal vez por stock, no se muestra. O muestra categoria y que muestre que no hay stock. Agregar form que si el user quiere ver cuando llegan productos

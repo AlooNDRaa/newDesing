@@ -23,3 +23,6 @@ document.addEventListener("DOMContentLoaded", () => { //domcontentLoad verifica 
     }
   });
   
+
+
+  // CAMBIAR BOTONES PARA CONTRASTE

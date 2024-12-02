@@ -2,8 +2,8 @@ document.getElementById("slider").innerHTML = `
 <div class="background">
         <div class="slider-container">
             <div class="slider">
-                <div class="slide"><img class="img-slide" src="../imgs/ofertas.png" alt="Image 1"></div>
-                <div class="slide"><img class="img-slide" src="../imgs/newbanner.png" alt="Image 2"></div>
+                <div class="slide"><img class="img-slide" src="../imgs/banners/bannerBlacks.png" alt="Image 1"></div>
+                <div class="slide"><img class="img-slide" src="../imgs/slide-moda/bannerModa2.png" alt="Image 2"></div>
             </div>
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
@@ -58,7 +58,7 @@ function prevSlide() {
 
 dots.forEach(dot => {
     dot.addEventListener('click', () => {
-        showSlides(parseInt(dot.dataset.index)); // Show the selected slide
+        showSlides(parseInt(dot.dataset.index)); 
     });
 });
 

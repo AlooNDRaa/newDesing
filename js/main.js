@@ -2,7 +2,7 @@ document.getElementById("header").innerHTML = `
 <nav class="menu__wrapper">
 <div class="menu__bar">
     <a href="../index.html">
-       <h1>MystiqueShop</h1>
+       <h1 class="title-home">MystiqueShop</h1>
     </a>
     <input type="search" placeholder="Busca productos, marcas y mas" id="Buscador" />
     <ul class="navigation hide">
@@ -74,22 +74,22 @@ document.getElementById("header").innerHTML = `
                 <h3>Para:</h3>
                 <ul class="list-menu-items">
                     <li>
-                        <a href="#enterprise" title="Enterprise">
+                        <a href="../html/services.html?sectionId=1" title="Enterprise">
                             Devoluciones
                         </a>
                     </li>
                     <li>
-                        <a href="#teams" title="Teams">
+                        <a href="../html/services.html?sectionId=2" title="Teams">
                             Pagos
                         </a>
                     </li>
                     <li>
-                        <a href="#startups" title="Startups">
+                        <a href="../html/services.html?sectionId=3" title="Startups">
                             Envios
                         </a>
                     </li>
                     <li>
-                        <a href="#education" title="Education">
+                        <a href="../html/services.html?sectionId=4" title="Education">
                             Correspondencia sospechosa
                         </a>
                     </li>
@@ -167,15 +167,15 @@ document.getElementById("footer").innerHTML = `
 
 <div class="row">
 <ul>
-<li><a href="#">Contact us</a></li>
-<li><a href="#">Our Services</a></li>
-<li><a href="#">Privacy Policy</a></li>
-<li><a href="#">Terms & Conditions</a></li>
+<li><a href="#">Contactanos</a></li>
+<li><a href="#">Servicios</a></li>
+<li><a href="#">Seguridad</a></li>
+<li><a href="#">Accesibilidad</a></li>
 </ul>
 </div>
 
 <div class="row">
-Alondra Gadea Copyright © 2024 Academy - All rights reserved  
+Alondra Gadea Copyright © 2024 Academy - todos los derechos reservados  
 </div>
 </div>
 </footer>

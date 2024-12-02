@@ -292,8 +292,10 @@ button:hover{
   }
   
 
-  .error-message {
-    color: red;
-    font-size: 12px;
+  .error-msg {
+    color: rgb(255, 149, 0);
+    font-size: 0.85rem;
     margin-top: 5px;
+    display: block; 
 }
+
