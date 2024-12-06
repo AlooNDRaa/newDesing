@@ -65,13 +65,12 @@ document.getElementById("header").innerHTML = `
         </li>
         <li>
             <button>
-                Asistencia
+                Centro de ayuda
                 <svg opacity="0.5" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-down HeaderMenu-icon ml-1">
                     <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
                 </svg>
             </button>
             <div class="dropdown">
-                <h3>Para:</h3>
                 <ul class="list-menu-items">
                     <li>
                         <a href="../html/services.html?sectionId=1" title="Enterprise">
@@ -93,6 +92,11 @@ document.getElementById("header").innerHTML = `
                             Correspondencia sospechosa
                         </a>
                     </li>
+                    <li>
+                        <a href="../html/services.html?sectionId=5" title="Education">
+                            Politicas de seguridad
+                        </a>
+                    </li>
                 </ul>
             </div>
         </li>
@@ -109,17 +113,14 @@ document.getElementById("header").innerHTML = `
                     <li>
                      <button id="mode-toggle" class="mode-toggle">Modo Oscuro</button>
                     </li>
-                    <li>
-                        <a title="Collections">
-                            Daltonismo: 
-                        </a>
-                        <button id="mode-toggle" class="mode-toggle">D1</button>
-                    </li>
-                    <li>
-                        <a title="Collections">
-                            Dislexia
-                        </a>
-                        <button id="mode-toggle" class="mode-toggle">D1</button>
+                <li class="accesibility">
+                    <a title="Daltonismo">Daltonismo y Dislexia</a>
+                    <button class="mode-toggle daltonism-toggle" data-mode="acromatopsia">Acromatopsia</button>
+                    <button class="mode-toggle daltonism-toggle" data-mode="dicromatismo">Dicromatismo</button>
+                    <button class="mode-toggle daltonism-toggle" data-mode="deuteranomaly">Deuteranomalía</button>
+                    <button class="mode-toggle daltonism-toggle" data-mode="protanomaly">Protanomalía</button>
+                    <button class="mode-toggle daltonism-toggle" data-mode="tritanomaly">Tritanomalía</button>
+                    <button id="dislexia-toggle" class="mode-toggle">Dislexia</button>
                     </li>
                 </ul>
             </div>
