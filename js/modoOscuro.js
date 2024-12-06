@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Cargar configuraciones guardadas
   const savedDarkMode = localStorage.getItem("dark-mode");
   const savedAccessibilityMode = localStorage.getItem("accessibility-mode");
+  const savedDislexiaMode = localStorage.getItem("dislexia-mode");
 
   // Aplicar modo oscuro si estaba activado
   if (savedDarkMode === "enabled") {
@@ -9,10 +10,27 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("mode-toggle").textContent = "Modo Claro";
   }
 
-  // Aplicar modo de accesibilidad guardado
+  // Aplicar modo de accesibilidad guardado (daltonismo)
   if (savedAccessibilityMode) {
     document.body.classList.add(savedAccessibilityMode);
   }
+
+  // Aplicar modo dislexia guardado
+  if (savedDislexiaMode === "enabled") {
+    document.body.classList.add("body-dislexia");
+  }
+
+  // Función para limpiar todas las clases de daltonismo
+  const clearDaltonismModes = () => {
+    const daltonismClasses = [
+      "body-acromatopsia",
+      "body-dicromatismo",
+      "body-deuteranomaly",
+      "body-protanomaly",
+      "body-tritanomaly",
+    ];
+    document.body.classList.remove(...daltonismClasses);
+  };
 
   // Configurar botón de modo oscuro
   const darkModeButton = document.getElementById("mode-toggle");
@@ -31,15 +49,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const daltonismButtons = document.querySelectorAll(".daltonism-toggle");
   daltonismButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const mode = button.getAttribute("data-mode");
+      const mode = `body-${button.getAttribute("data-mode")}`;
 
-      // Eliminar todas las clases relacionadas con daltonismo
-      const daltonismModes = ["body-acromatopsia", "body-dicromatismo", "body-deuteranomaly", "body-protanomaly", "body-tritanomaly"];
-      document.body.classList.remove(...daltonismModes);
-
-      // Activar la clase correspondiente
-      document.body.classList.add(`body-${mode}`);
-      localStorage.setItem("accessibility-mode", `body-${mode}`);
+      if (document.body.classList.contains(mode)) {
+        // Si ya está activo, desactivarlo
+        document.body.classList.remove(mode);
+        localStorage.removeItem("accessibility-mode");
+      } else {
+        // Limpiar otros estilos de daltonismo y activar
+        clearDaltonismModes();
+        document.body.classList.add(mode);
+        localStorage.setItem("accessibility-mode", mode);
+      }
     });
   });
 
@@ -47,10 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const dislexiaButton = document.getElementById("dislexia-toggle");
   dislexiaButton.addEventListener("click", () => {
     const isActive = document.body.classList.toggle("body-dislexia");
+
+    // Guardar estado de dislexia en localStorage
     if (isActive) {
-      localStorage.setItem("accessibility-mode", "body-dislexia");
+      localStorage.setItem("dislexia-mode", "enabled");
     } else {
-      localStorage.removeItem("accessibility-mode");
+      localStorage.removeItem("dislexia-mode");
     }
   });
 });
