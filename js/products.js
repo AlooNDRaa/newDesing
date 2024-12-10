@@ -5,6 +5,25 @@ function showCategoryProducts(categoryId) {
     const categoryProducts = Cards[categoryName.toLowerCase()]; 
 
     const productsContainer = document.getElementById("products-container");
+    const dontShowBackground = document.getElementById("text-bacground");
+
+    if (!categoryProducts || categoryProducts.length === 0) {
+
+        
+        dontShowBackground.style.display = "none";
+
+        productsContainer.innerHTML = `
+        <div class="services-require">
+            <p class="error-p-services">No hay productos disponibles para esta categoría, si desea un aviso de los nuevos productos ingrese su email</p>
+            <span> Recuerde revisar que el remitente tenga nuestro codigo seguro antes de hacer alguna operacion </span>
+            <div class="send-email-services"> 
+                <input type="text" name"email" placeholder="Ingresa tu email">
+                <button class="send-email">Pedir</button>
+            </div>
+      </div>
+        `;
+        return;
+    }
 
     categoryProducts.forEach(product => {
         const productElement = document.createElement("div");
@@ -43,6 +62,7 @@ function getCategoryNameById(id) {
         case "4": return "belleza";
         case "5": return "hogar";
         case "6": return "ofertas";
+        case "7" : return "obsequios"
         default: return "home"; 
     }
 }
@@ -64,4 +84,3 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// agregar manejo de productos donde maneje tal vez por stock, no se muestra. O muestra categoria y que muestre que no hay stock. Agregar form que si el user quiere ver cuando llegan productos

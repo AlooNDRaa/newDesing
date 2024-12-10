@@ -72,6 +72,8 @@ function getCategoryNameById(id) {
       return "envios";
     case "4":
       return "correspondencia";
+    case "5":
+      return "politicas"
     default:
       return "home";
   }

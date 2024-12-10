@@ -58,6 +58,20 @@ document.getElementById("header").innerHTML = `
                             </a>
                         </div>
                     </li>
+                      <li>
+                        <div class="item-title">
+                            <a href="../html/cards.html?categoryId=7">
+                                <h3>Obsequios</h3>
+                            </a>
+                        </div>
+                    </li>
+                      <li>
+                        <div class="item-title">
+                            <a href="../html/404.html">
+                                <h3>Error</h3>
+                            </a>
+                        </div>
+                    </li>
                 </ul>
 
                 </ul>

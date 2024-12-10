@@ -29,6 +29,11 @@ export const Cards = {
             id: 6,
             name:"Ofertas",
             link:"../html/cards.html"
+        },
+        {
+            id: 7,
+            name: "obsequios",
+            link: "../html/cards.html"
         }
     ],
     belleza: [
@@ -311,6 +316,9 @@ export const Cards = {
             img: "../imgs/productos/ofertas/offer8.jpg",
             alt: "Imagen de bufanda de lana tejida"
         }
+    ], 
+    obsequios: [
+
     ]
         
 }
