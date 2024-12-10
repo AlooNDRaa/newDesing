@@ -844,6 +844,62 @@ div>.home-h2 {
 }
 
 
+/* CART------------------- */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--texts);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.main h1 {
+    margin-block: 1rem;
+}
+
+#cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--background);
+    height: 20rem;
+    width: 50rem;
+   box-shadow: 10px 8px 10px rgba(110, 106, 106, 0.397);
+   border-radius: 0.5rem;
+   margin-block: 2rem;
+}
+
+#cart p {
+    text-align: center;
+}
+
+#cart #cart-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#cart-summary button {
+    color: var(--black);
+    background-color: var(--cream);
+    box-shadow: inset 9px 10px 7px rgba(0, 0, 0, 0.301);
+    border: none;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#cart-summary button:hover {
+    background-color: var(--texts);
+}
+
 /* DARK MODE */
 
 .dark-mode {
@@ -992,6 +1048,17 @@ div>.home-h2 {
     box-shadow: 10px 7px 10px rgba(255, 255, 255, 0.281);
 }
 
+.dark-mode #cart {
+    background-color: var(--black);
+   box-shadow: 10px 8px 10px rgba(110, 106, 106, 0.397);
+}
+
+.dark-mode .main {
+    color: var(--cream);
+}
+
+
+
 /* OTROS METODOS DE ACCESIBILIDAD ------------------------------------------------------ */
 
 .accesibility button{
@@ -1064,7 +1131,6 @@ div>.home-h2 {
 
 /* DISLEXIA */
 .body-dislexia {
-
     font-family: "OpenDyslexic", Arial, sans-serif;
     line-height: 1.6;
     letter-spacing: 0.05em;

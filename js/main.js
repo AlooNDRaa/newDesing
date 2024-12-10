@@ -141,7 +141,7 @@ document.getElementById("header").innerHTML = `
         </li>
         <li>
             <a
-                href="#pricing"
+                href="../html/cart.html"
                 title="cart"
             >
                 <span class="material-symbols-outlined">
