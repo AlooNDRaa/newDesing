@@ -932,6 +932,114 @@ div>.home-h2 {
     border-bottom: dotted 5px;
 } 
 
+/* Contact Form ---------------------------- */
+.container-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+    width: 100%;
+    font-family: "Montserrat";
+}
+
+.container-contact .label-form {
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+}
+
+#app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.div-hijo-form {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 2rem;
+    margin-block: 2rem;
+    width: 100%;
+    max-width: 500px; 
+    border-radius: 8px;
+    box-shadow: inset 10px 10px 9px 10px rgba(0, 0, 0, 0.171);
+    border: 1px solid rgba(128, 128, 128, 0.363);
+}
+
+.div-hijo-form label {
+    font-size: 1rem;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.div-hijo-form input,
+.div-hijo-form textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: var(--background);
+    font-size: 1rem;
+    box-shadow: inset 10px 10px 9px 3px rgba(0, 0, 0, 0.178);
+    border-radius: 4px;
+}
+
+.div-hijo-form input:focus,
+.div-hijo-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-dark);
+}
+
+.div-hijo-form .error-msg {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.h3-form {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+    text-align: center;
+    font-family: "Montserrat";
+}
+
+.button-inset {
+    padding: 1rem;
+    border: none;
+    font-weight: 600;
+    background-color: var(--primary-dark);
+    color: var(--background);
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button-inset:disabled {
+    background-color: #c5c4c4e0;
+    opacity: 50%;
+    cursor: not-allowed;
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+input:invalid,
+textarea:invalid {
+    border-color: rgb(202, 17, 17);
+}
+
+input:invalid + .error-msg,
+textarea:invalid + .error-msg {
+    display: block;
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
 
 /* DARK MODE */
 
@@ -1090,6 +1198,82 @@ div>.home-h2 {
     color: var(--cream);
 }    
 
+/* Contact Form ---------------------------- */
+
+.dark-mode .container-contact .label-form {
+    color: var(--cream);
+}
+
+.dark-mode .div-hijo-form {
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 2rem;
+    margin-block: 2rem;
+    width: 100%;
+    max-width: 500px; 
+    border-radius: 8px;
+    box-shadow: inset 10px 10px 9px 10px rgba(0, 0, 0, 0.171);
+    border: 1px solid rgba(128, 128, 128, 0.363);
+}
+
+.dark-mode .div-hijo-form label {
+    font-size: 1rem;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.dark-mode .div-hijo-form input,
+.dark-mode .div-hijo-form textarea {
+    border: 1px solid #ffffff52;
+    color: var(--cream);
+    background-color: transparent;
+    box-shadow: inset 4px 7px 7px 2px rgba(255, 255, 255, 0.089);
+}
+
+.dark-mode .div-hijo-form input:focus,
+.dark-mode .div-hijo-form textarea:focus {
+    outline: none;
+    border-color: var(--cream);
+}
+
+.dark-mode .div-hijo-form .error-msg {
+    color: rgb(255, 136, 0);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.dark-mode .h3-form {
+    color: var(--cream);
+}
+
+.dark-mode .button-inset {
+    background-color: var(--cream);
+    color: var(--black);
+}
+
+.dark-mode .button-inset:disabled {
+    background-color: var(--cream);
+    opacity: 17%;
+    cursor: not-allowed;
+    font-weight: 600;
+}
+
+.dark-mode input:invalid,
+.dark-mode textarea:invalid {
+    border-color: rgb(201, 113, 13);
+}
+
+.dark-mode input:invalid + .error-msg,
+.dark-mode textarea:invalid + .error-msg {
+    display: block;
+    color: rgb(255, 136, 0);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
 
 
 /* OTROS METODOS DE ACCESIBILIDAD ------------------------------------------------------ */
@@ -1099,68 +1283,6 @@ div>.home-h2 {
     margin-block:1rem;
 }    
 
-/* ACROMATOPSIA (Escala de grises) */
-
-.body-acromatopsia {
-    --primary-light2: #d3d3d3;
-    --primary-dark: #4f4f4f;
-    --background: #e0e0e0;
-    --texts: #000000;
-    --gray: #808080;
-    --white: #ffffff;
-    --black: #000000;
-    --cream: #c0c0c0;
-}    
-
-.body-acromatopsia {
-    background-color: var(--background);
-    filter: grayscale(100%);
-}    
-
-.body-acromatopsia .title-home:hover {
-    color: var(--primary-dark);
-}    
-
-
-/* DEUTERANOMALÍA */
-.body-deuteranomaly {
-    --primary-light2: #ffebd6;
-    --primary-dark: #a0522d;
-    --background: #ffe4c4;
-    --texts: #000000;
-    --gray: #8b8378;
-    --white: #f5deb3;
-    --black: #000000;
-    --cream: #ffdead;
-}    
-
-.body-deuteranomaly {
-    background-color: var(--background);
-}    
-
-.body-deuteranomaly .title-home:hover {
-    color: var(--primary-dark);
-}    
-
-/* PROTANOMALÍA */
-.body-protanomaly {
-    --primary-light2: #ffe4c4;
-    --primary-dark: #8b4513;
-    --background: #faf0e6;
-    --texts: #000000;
-    --gray: #8b8378;
-    --white: #ffffff;
-    --black: #000000;
-    --cream: #f5deb3;
-}    
-
-.body-protanomaly {
-    background-color: var(--background);
-}    
-
-.body-protanomaly .title-home:hover {
-    color: var(--primary-dark);
-}    
 
 /* DISLEXIA */
 .body-dislexia {

@@ -41,6 +41,7 @@ document.getElementById("header").innerHTML = `
             <li><a href="../html/services.html?sectionId=3">Envios</a></li>
             <li><a href="../html/services.html?sectionId=4">Correspondencia sospechosa</a></li>
             <li><a href="../html/services.html?sectionId=5">Políticas de seguridad</a></li>
+            <li><a href="../html/contacto.html">Contacto</a></li>
           </ul>
         </div>
       </li>
