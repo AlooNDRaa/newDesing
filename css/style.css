@@ -43,6 +43,7 @@ body {
 /* Estilos generales */
 .menu__wrapper {
     display: flex;
+    justify-content: space-around;
     flex-direction: row;
     font-family: "Montserrat", serif;
     width: 100%;
@@ -52,6 +53,22 @@ body {
     height: var(--navbar-height);
     padding: 1rem;
     align-items: center;
+}
+
+#Buscador-h{
+    display: none;
+    background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 5px;
+    background-size: 24px;
+    background-position: 0% 50%;
+    background-color: white;
+    border-radius: 0.5rem;
+    width: fit-content;
+    box-shadow: 3px 8px 10px rgba(78, 78, 78, 0.151);
+    border: transparent;
+    border-bottom: solid 1px #ccc;
+    padding: 10px 10px 10px 25px;
+    outline: none;
+    margin: 0 1rem 0 0;
 }
 
 .menu__bar {
@@ -74,7 +91,6 @@ a {
     color: var(--texts);
 }
 
-/* Menú de navegación */
 .navigation {
     display: flex;
     flex-direction: row;
@@ -84,7 +100,6 @@ a {
     gap: 0.5rem;
 }
 
-/* Elementos de navegación */
 .navigation > li {
     display: flex;
     position: relative;
@@ -127,7 +142,6 @@ a {
     transition: all 0.2s ease-in-out;
 }
 
-/* Menú desplegable */
 .dropdown {
     position: absolute;
     top: 3.5rem;
@@ -144,7 +158,6 @@ a {
     animation: fadeIn 0.2s ease-in-out;
 }
 
-/* Animación de despliegue */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -222,13 +235,11 @@ a {
     font-size: var(--font-size-P);
 }
 
-/* Muestra el dropdown cuando el usuario pasa el mouse */
 .navigation > li:hover .dropdown {
     display: flex;
     opacity: 1;
 }
 
-/* Estilos de botones de acción */
 .action-buttons {
     display: flex;
     gap: 0.5rem;
@@ -260,7 +271,6 @@ a {
     border: 1px solid var(--white);
 }
 
-/* Menú hamburguesa */
 .burger-menu {
     display: none;
     outline: none;
@@ -273,53 +283,29 @@ a {
     stroke: var(--texts);
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
-    .burger-menu {
-        display: block;
-    }
-
-    .menu__bar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navigation {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navigation.show {
-        display: flex;
-    }
-
-    .navigation > li {
-        width: 100%;
-    }
-
-    .navigation > li > button {
-        width: 100%;
-        text-align: left;
-    }
-
-    .dropdown {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
+.navigation.mobile-hide {
+    display: none;
 }
 
-/* Estilo para el menú desplegable al hacer clic */
+.navigation.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 12rem;
+    width: 50%;
+    z-index: 100;
+    background-color: #000000a1;
+}
+
+
+
+
 .navigation > li > button.active + .dropdown {
     display: flex;
     opacity: 1;
 }
 
-
-
-/* Buscador */
 
 #Buscador {
     background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 5px;
@@ -327,7 +313,7 @@ a {
     background-position: 0% 50%;
     background-color: var(--background);
     border-radius: 0.5rem;
-    width: 500px;
+    width: 100%;
     box-shadow: 3px 8px 10px rgba(78, 78, 78, 0.151);
     border: transparent;
     border-bottom: solid 1px #ccc;
@@ -1235,6 +1221,14 @@ div>.home-h2 {
         padding: 1rem;
 
     }    
+
+    .action-buttons {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    
 }    
 
 
@@ -1248,18 +1242,15 @@ div>.home-h2 {
     }    
 
     .menu__wrapper {
-        display: flex;
+        display: none;
         justify-content: space-between;
     }    
-
 
     .action-buttons {
         order: 0;
     }    
 
-    #Buscador {
-        display: none;
-    }    
+
 
     .footer {
         text-align: center;
@@ -1283,33 +1274,69 @@ div>.home-h2 {
     }
 }    
 
+@media (max-width: 768px) {
+
+    .menu__wrapper {
+        width:100% !important;
+        position: fixed;
+    }
+
+    .burger-menu {
+        display: block; 
+    }
+
+    .menu__bar {
+        display: flex;
+    }
+
+    .navigation {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 40%;
+        display: flex;
+    }
+
+    .navigation > li {
+
+        height: 100%;
+    }
+
+    .navigation > li > button {
+        width: 100%;
+        text-align: left;
+    }
+
+    .dropdown {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
 @media (max-width: 1250px) {
     a h1 {
         font-size: 1rem;
     }    
 
-    .hide {
+    .burger-menu {
         display: none;
+    }
+
+    .hide {
+        display: flex;
     }    
 
     .menu__wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }    
 
 
     .action-buttons {
         order: 0;
     }    
-
-    #Buscador {
-        display: none;
-    }    
-
-    .burger-menu {
-        display: flex;
-        align-items: center;
-    }    
+  
 }    
 
 
@@ -1325,6 +1352,16 @@ div>.home-h2 {
         object-fit: cover;
         object-position: 15%;
     }    
+
+    
+    #Buscador {
+        display: none;
+        width: 90%;
+    }   
+
+    #Buscador-h{
+        display: flex;
+    }
 }    
 
 

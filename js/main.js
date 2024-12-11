@@ -6,6 +6,7 @@ document.getElementById("header").innerHTML = `
     </a>
     <input type="search" placeholder="Busca productos, marcas y más" id="Buscador" />
     <ul class="navigation hide">
+        <input type="search" placeholder="Busca productos, marcas y más" id="Buscador-h" />
       <li>
         <button>
           Productos
@@ -55,12 +56,7 @@ document.getElementById("header").innerHTML = `
           <ul class="list-menu-items">
             <li><button id="mode-toggle" class="mode-toggle">Modo Oscuro</button></li>
             <li class="accesibility">
-              <a title="Daltonismo">Daltonismo y Dislexia</a>
-              <button class="mode-toggle daltonism-toggle" data-mode="acromatopsia">Acromatopsia</button>
-              <button class="mode-toggle daltonism-toggle" data-mode="dicromatismo">Dicromatismo</button>
-              <button class="mode-toggle daltonism-toggle" data-mode="deuteranomaly">Deuteranomalía</button>
-              <button class="mode-toggle daltonism-toggle" data-mode="protanomaly">Protanomalía</button>
-              <button class="mode-toggle daltonism-toggle" data-mode="tritanomaly">Tritanomalía</button>
+              <a title="Daltonismo"> Dislexia</a>
               <button id="dislexia-toggle" class="mode-toggle">Dislexia</button>
             </li>
           </ul>
@@ -71,11 +67,11 @@ document.getElementById("header").innerHTML = `
           <span class="material-symbols-outlined">shopping_cart</span>
         </a>
       </li>
+      <div class="action-buttons">
+        <a href="../html/registros.html" title="Sign in" class="secondary hide">Sign in</a>
+        <a href="#sign-in" title="Sign in" class="secondary hide">Sign out</a>
+      </div>
     </ul>
-  </div>
-  <div class="action-buttons">
-    <a href="../html/registros.html" title="Sign in" class="secondary hide">Sign in</a>
-    <a href="#sign-in" title="Sign in" class="secondary hide">Sign out</a>
   </div>
   <button class="burger-menu">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -92,18 +88,20 @@ const burgerMenu = document.querySelector('.burger-menu');
 const navigation = document.querySelector('.navigation');
 
 document.addEventListener('DOMContentLoaded', () => {
-  navigation.classList.add('hide'); 
+    if (window.innerWidth <= 768) {
+        navigation.classList.add('mobile-hide');
+    }
 });
 
 burgerMenu.addEventListener('click', () => {
-  navigation.classList.toggle('hide');
+    navigation.classList.toggle('mobile-hide');
+    navigation.classList.toggle('show');
 });
 
-const dropdownButtons = document.querySelectorAll('.menu__wrapper .dropdown button');
-dropdownButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const dropdown = button.nextElementSibling; 
-    dropdown.classList.toggle('show');
-    dropdown.classList.toggle('hide');
-  });
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        navigation.classList.remove('mobile-hide', 'show');
+    } else {
+        navigation.classList.add('mobile-hide');
+    }
 });
