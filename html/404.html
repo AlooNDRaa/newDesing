@@ -3,20 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>404</title>
 </head>
 <body>
-    <div class="centerError">
-        <section class="error-container">
-          <span><span>4</span></span>
-          <span>0</span>
-          <span><span>4</span></span>
-        </section>
-        <div class="link-container">
-          <a href="../index.html" class="more-link">No se ha encontrado la ruta, regresa al inicio <br>
-             <span>Ir</span></a>
-        </div>
+
+  <div class="centerError-404">
+  
+  <svg class="error-svg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="stroke-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color: rgba(255, 255, 255, 0.315); stop-opacity: 1" />
+          <stop offset="100%" style="stop-color: rgba(31, 30, 30, 0.068); stop-opacity: 1" />
+        </linearGradient>
+      </defs>
+      <path 
+        class="path-svg" 
+        d="M0 50 Q 100 10, 200 50 T 360 50 T 200 80 T 700 300 T 950 600 T 900 400 T 1000 300 T 1600 400" 
+        stroke="url(#stroke-gradient)" 
+        fill="none" 
+        stroke-width="4"/>
+    </svg>
+    
+    <div class="contError">
+      <h1>ERROR 404</h1>
+        <p>
+          La ruta a la que ha querido acceder no se encuentra
+        </p>
+        <a href="../index.html" class="a-link">Volver al inicio</a>
     </div>
+  </div>
 </body>
 </html>
