@@ -72,7 +72,7 @@ function renderFormularioContacto() {
     const appContainer = document.getElementById('app-container');
     appContainer.innerHTML = `
     <h3 class="h3-form">Formulario de Contacto</h3>
-        <div class="div-hijo-form">
+        <div class="div-hijo-form-contact">
             <form id="contact-form" action="https://formspree.io/f/xzzbqyaw" method="post">
                 <div class="container-contact">
                     <label class="label-form" for="nombre">Nombre*</label>
